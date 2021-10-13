@@ -1,5 +1,5 @@
 const HelloToken = artifacts.require("HelloToken");
-
+//migrations에서 가져 온다.
 /*
  * uncomment accounts to access the test accounts made available by the
  * Ethereum client
@@ -11,6 +11,7 @@ const HelloToken = artifacts.require("HelloToken");
 //     return assert.isTrue(true);
 //   });
 // });
+//migrations에서 가져 온 것에서 instance해서 hello로 함수 바로 호출!!
 contract("HelloToken", ()=>{
   it("hello function call",async ()=>{
     let instance = await HelloToken.deployed()
